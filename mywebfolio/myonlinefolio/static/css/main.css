@@ -1,0 +1,123 @@
+body{
+  /*font-family: "Montserrat", "droid-sans", sans-serif;
+	font-family: "Montserrat", "droid-sans",sans-serif;
+	font-style: normal;
+	font-weight: 400;*/
+	padding-top: 70px;
+}
+
+h1{
+  /*font-family: "droid-sans", sans-serif;*/
+	font-family: "adobe-caslon-pro",serif;
+	font-style: normal;
+	font-weight: 600;
+  }
+
+nav{
+background-color:white;
+}
+
+.color-me{
+color: black;
+}
+
+.myheader{
+/*background-color:#C4C4C4;*/
+background-color:white;
+color:black;
+}
+
+.ideology{
+/*background-color:#F4FA58, #16d4d9; #e3e3e3*/
+background-color:#338533;
+/*#C4C4C4;*/
+color:white;
+/*#EDFF00;*/
+}
+
+.language{
+background-color:white;
+/*background-color:#ae50ca;*/
+}
+
+img{
+	-webkit-animation-name: example; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: example;
+    animation-duration: 2s;
+}
+
+.education{
+	background-color:#FF5C5C; 
+	/*#35BA82;*/
+	color:white;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%  {}
+    50% { -ms-transform: translate(50px); /* IE 9 */ -webkit-transform: translate(50px); /* Safari */}
+    100% {}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {}
+    50%  {transform: translate(50px);}
+    100% {}
+}
+
+#me{
+height:400px;
+width:250px;
+}
+
+#logo{
+top:0px;
+height:32px;
+width:32px;
+}
+
+/* Button Styles*/
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+	background: black;
+	color:white;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+/* 
+.btn-primary {
+    background: #0099cc;
+    color: #000000;
+}*/
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+}
+
+
+
+/*.caret-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid rgba(0, 0, 0, 0);
+    border-right: 4px solid rgba(0, 0, 0, 0);
+    border-bottom: 4px solid;
+    
+    display: inline-block;
+    margin-left: 2px;
+    vertical-align: middle;
+}*/
