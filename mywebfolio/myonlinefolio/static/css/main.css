@@ -30,6 +30,7 @@ color:black;
 .ideology{
 /*background-color:#F4FA58, #16d4d9; #e3e3e3*/
 background-color:#338533;
+opacity:0.8;
 /*#C4C4C4;*/
 color:white;
 /*#EDFF00;*/
@@ -48,8 +49,9 @@ img{
 }
 
 .education{
-	background-color:#FF5C5C; 
-	/*#35BA82;*/
+	background-color:#027CD5;
+	opacity:0.8;
+	/*#35BA82; #FF5C5C;*/
 	color:white;
 }
 
@@ -121,3 +123,23 @@ width:32px;
     margin-left: 2px;
     vertical-align: middle;
 }*/
+
+/* set the fixed height of the footer here */
+#footer {
+  height: 400px;
+  background-color: #222222;
+  color:white;
+  z-index:100;
+}
+
+#footer > .container {
+  padding: 20px;
+}
+
+#footer a:hover {
+  text-decoration:none;
+}
+
+#footer img:hover{
+	margin-top:-10px;
+}
