@@ -8,11 +8,11 @@
     
 		<title>Yougansh Sharma | Home</title>
 		
-		<!-- Youg_Folio adobe font typekit-->
+		<!-- Youg_Folio adobe font typekit
 		<script src="//use.typekit.net/pkg7knc.js"></script>
 		<script>try{Typekit.load();}catch(e){}</script>
 		
-		<link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>-->
 		
         <link rel="stylesheet" type="text/css" href="../static/css/main.css">
         
@@ -31,64 +31,64 @@
         <script src="../static/js/bootstrap-hover-dropdown"></script>
         <script src="../static/js/bootstrap-hover-dropdown.min"></script> -->
 		
-		<!-- Smooth Scroll -->
-		<script>
-		function getScrollTop(){
-			if(typeof pageYOffset!= 'undefined'){
-			//most browsers except IE before #9
-			return pageYOffset;
-			} else {
-			var B = document.body; //IE 'quirks'
-			var D = document.documentElement; //IE with doctype
-			D = (D.clientHeight) ? D : B;
-			return D.scrollTop;
-			}
-		}
-
-		var timeouts = [];
-		var scrolling = false;
-		var scroller;
-		var scrollTop = getScrollTop();
-		var timeMs;
-		var alter = false;
-		var speed = 5;
-		window.onscroll = function() {
-		if(alter) {
-        var timeDif = new Date().getMilliseconds() - timeMs;
-        speed = 5 - (timeDif / 50);
-        console.log(speed);
-		}
-		timeMs = new Date().getMilliseconds();
-		alter = !alter;
-		var scrollDirection = getScrollTop() - scrollTop;
-		scrollDirection = scrollDirection / Math.abs(scrollDirection);
-		scrollTop = getScrollTop();
-		clearTimeout(scroller);
-		scroller = setTimeout(function(){
-        console.log('smooth scrolling active');
-        if(!scrolling) {
-            timeouts.length = 0;
-            scrolling = true;
-            var steps = 50;
-            var delay = 6;
-            for(var i = 0; i < steps; i++) {
-                (function(i){
-                    var timeout = setTimeout(function(){
-                        var perc = i / steps; 
-                        var val = (perc == 1) ? 1 : (-Math.pow(2, -10 * perc) + 1); 
-                        var scrollY = val * speed * scrollDirection;
-                        window.scrollTo(0, getScrollTop() + scrollY);
-                        setTimeout(function(){
-                            if(i == (steps - 1)) scrolling = false;
-                        }, steps * delay);
-                    }, (i * delay));
-                    timeouts.push(timeout);
-                })(i);
-            }
+	<!-- Smooth Scroll -->
+	<script>
+    function getScrollTop() {
+        if (typeof pageYOffset != 'undefined') {
+            //most browsers except IE before #9
+            return pageYOffset;
+        } else {
+            var B = document.body; //IE 'quirks'
+            var D = document.documentElement; //IE with doctype
+            D = (D.clientHeight) ? D : B;
+            return D.scrollTop;
         }
-		}, 50);
-		};
-		</script>
+    }
+
+    var timeouts = [];
+    var scrolling = false;
+    var scroller;
+    var scrollTop = getScrollTop();
+    var timeMs;
+    var alter = false;
+    var speed = 5;
+    window.onscroll = function() {
+        if (alter) {
+            var timeDif = new Date().getMilliseconds() - timeMs;
+            speed = 5 - (timeDif / 50);
+            console.log(speed);
+        }
+        timeMs = new Date().getMilliseconds();
+        alter = !alter;
+        var scrollDirection = getScrollTop() - scrollTop;
+        scrollDirection = scrollDirection / Math.abs(scrollDirection);
+        scrollTop = getScrollTop();
+        clearTimeout(scroller);
+        scroller = setTimeout(function() {
+            console.log('smooth scrolling active');
+            if (!scrolling) {
+                timeouts.length = 0;
+                scrolling = true;
+                var steps = 50;
+                var delay = 6;
+                for (var i = 0; i < steps; i++) {
+                    (function(i) {
+                        var timeout = setTimeout(function() {
+                            var perc = i / steps;
+                            var val = (perc == 1) ? 1 : (-Math.pow(2, -10 * perc) + 1);
+                            var scrollY = val * speed * scrollDirection;
+                            window.scrollTo(0, getScrollTop() + scrollY);
+                            setTimeout(function() {
+                                if (i == (steps - 1)) scrolling = false;
+                            }, steps * delay);
+                        }, (i * delay));
+                        timeouts.push(timeout);
+                    })(i);
+                }
+            }
+        }, 50);
+    };
+	</script>
 		
 	</header>
 	
@@ -147,34 +147,32 @@
     </div><!-- /.navbar-collapse -->
 	</nav>
 	
-	<div class="row myheader">
-		<div class="col-md-6 text-center">
+	<div class="row myheader text-center">
+		<div class="col-lg-4 text-center">
 			<img id="me" alt="Brand" src="../static/images/my_pic.png">
 		</div>
-		<div class="col-md-6">
-			<h1 class="text-center tk-adobe-caslon-pro"><b>Yougansh Sharma</b></h1>
+		<div class="col-lg-8">
+			
+			<img id="title" alt="Brand" src="../static/images/title1.png">
+		<!--<h1 class="text-center tk-adobe-caslon-pro"><b>Yougansh Sharma</b></h1>
 			<h2 class="text-center">Software Engineer</h2>
 			<h2 class="text-center">UI Developer | Front End Developer</h2>
 		
-			<button class="btn btn-default center-block">Know More</button>
+			<button class="btn btn-default center-block">Know More</button>-->
 		</div>
 		
 	</div>
 	
 	<div class="row education text-center">
-		
+		<img alt="Brand" src="../static/images/edu1.png">
 		<h1>Academia</h1>
-		<p>
-			<h2> A Bachelor Engineer in Information & Technology</h1>
-		</p>
-		<p>
-			<h2>I Class|2012</h2>
-		</p>
+		<h2> A Bachelor Engineer in Information & Technology</h1>
+		<h2>I Class|2012</h2>
 	</div>
 
 	
 	<div class="row language" id="language">
-		<h2 class="text-center">Languages Known</h2>
+		<h1 class="text-center">Languages Known</h1>
 		<div class="col-md-4 text-center">
 			<img src="../static/images/read.png">
 			<h5>English | Hindi</h5>
@@ -191,7 +189,7 @@
 	
 	<div class="row ideology text-center">
 		<h1>Ideology</h1>
-		<h1>Think, Plan & Implement Wise to Achieve Big</h1>
+		<h2>Think, Plan & Implement Wise to Achieve Big</h2>
 		<h3>- Yougansh Sharma</h3>
 	</div>
 	
