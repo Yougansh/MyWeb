@@ -21,15 +21,17 @@
         <!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+		<!-- Optional theme 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"> -->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 		
-		<!-- <script src="../static/js/dropdown-hover"></script>
-        <script src="../static/js/bootstrap-hover-dropdown"></script>
-        <script src="../static/js/bootstrap-hover-dropdown.min"></script> -->
+		<!-- <script src="../static/js/dropdown-hover"></script>-->
+        <script src="../static/js/bootstrap-hover-dropdown.js"></script>
+        <script src="../static/js/bootstrap-hover-dropdown.min.js"></script> 
 		
 	<!-- Smooth Scroll -->
 	<script>
@@ -113,43 +115,50 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav">
         
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle color-me" data-toggle="dropdown">About Me <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle color-me" data-toggle="dropdown" data-hover="dropdown">About Me <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#" class="color-me">Action</a></li>
-            <li><a href="#" class="color-me">Another action</a></li>
-            <li><a href="#" class="color-me">Something else here</a></li>
+            <li><a href="#" class="color-me">Academia</a></li>
+            <li><a href="#" class="color-me">Languages Known</a></li>
             <li class="divider"></li>
-            <li><a href="#" class="color-me">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#" class="color-me">One more separated link</a></li>
+            <li><a href="#" class="color-me">Ideology</a></li>
           </ul>
         </li>
         
         <li><a href="#language" class="color-me">Skills</a></li>
-      </ul>
+		
+		<li class="dropdown">
+          <a href="#" class="dropdown-toggle color-me" data-toggle="dropdown" data-hover="dropdown">My Works<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#" class="color-me">Projects</a></li>
+			<li class="divider"></li>
+            <li><a href="#" class="color-me">Experience</a></li>
+          </ul>
+        </li>
+		
+		<li class="dropdown">
+          <a href="#" class="dropdown-toggle color-me" data-toggle="dropdown" data-hover="dropdown">Interests <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#" class="color-me">Hobbies</a></li>
+			<li class="divider"></li>
+            <li><a href="#" class="color-me">Achievements</a></li>
+          </ul>
+        </li>
+
+	</ul>
 
       <ul class="nav navbar-nav navbar-right">
         
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle color-me" data-hover="dropdown" role="button" aria-expanded="false">Get In Touch <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#" class="color-me">Action</a></li>
-            <li><a href="#" class="color-me">Another action</a></li>
-            <li><a href="#" class="color-me">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#" class="color-me">Separated link</a></li>
-          </ul>
-        </li>
+		<li><a href="#footer" class="color-me"><span class="glyphicon glyphicon-envelope" aria-hidden="true"> Get In Touch</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
 	</nav>
 	
 	<div class="row myheader text-center">
 		<div class="col-lg-4 text-center">
-			<img id="me" alt="Brand" src="../static/images/my_pic.png">
+			<a href="#"><img id="me" alt="Brand" src="../static/images/my_pic.png"></a>
 		</div>
 		<div class="col-lg-8">
 			
@@ -163,7 +172,7 @@
 		
 	</div>
 	
-	<div class="row education text-center">
+	<div class="row education text-center" id="academia">
 		<img alt="Brand" src="../static/images/edu1.png">
 		<h1>Academia</h1>
 		<h2> A Bachelor Engineer in Information & Technology</h1>
@@ -187,7 +196,7 @@
 		</div>
 	</div>
 	
-	<div class="row ideology text-center">
+	<div class="row ideology text-center" id="ideology">
 		<h1>Ideology</h1>
 		<h2>Think, Plan & Implement Wise to Achieve Big</h2>
 		<h3>- Yougansh Sharma</h3>
@@ -237,7 +246,7 @@
 			
 			<div class="col-lg-4 text-center">
 				<h5>Quick Connect:</h5>
-				<form role="form">
+				<form role="form" method="post" action="mailto:youganshsharma@gmail.com" enctype="text/plain">
 
 					<div class="form-group text-left">
 						<label for="name">Name:</label>
@@ -251,7 +260,7 @@
 						<label for="message">Message:</label>
 							<textarea class="form-control" rows="3" placeholder="Write your message"></textarea>
 					</div>
-					<button type="submit" class="btn btn-default center-block">Submit</button>
+					<button type="submit" value="Send Email" class="btn btn-default center-block">Submit</button>
 				</form>
 			</div>
 			
@@ -264,9 +273,6 @@
 
 	</div><!--/container-->
 </div><!--/footer-->
-        
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	
     </body>
 
